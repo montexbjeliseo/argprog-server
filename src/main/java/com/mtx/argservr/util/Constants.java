@@ -11,6 +11,8 @@ public class Constants {
         public static final String USER_ID = "user_id";
         public static final String EDUCATIONS = "educations";
         public static final String EXPERIENCES = "experiences";
+        public static final String PROJECTS = "projects";
+        
     }
 
     public static abstract class Endpoints {
@@ -25,6 +27,7 @@ public class Constants {
 
         public static final String EDUCATION = ROOT + "/educations";
         public static final String EXPERIENCE = ROOT + "/experiences";
+        public static final String PROJECT = ROOT + "/projects";
     }
 
     public static abstract class Patterns {
