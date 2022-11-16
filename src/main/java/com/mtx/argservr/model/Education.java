@@ -1,15 +1,11 @@
-package com.mtx.argservr.security.model;
+package com.mtx.argservr.model;
 
 import com.mtx.argservr.util.Constants.Tables;
 import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.List;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,20 +14,20 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
-@Table(name = Tables.ROLES)
+@Table(name = Tables.EDUCATIONS)
 @Getter
 @Setter
 @NoArgsConstructor
-public class Role {
+public class Education {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
+    private String title;
     private String description;
-    @ManyToMany(mappedBy = Tables.ROLES, fetch = FetchType.LAZY)
-    private List<User> users = new ArrayList<>();
-    
+    private String institution;
+    private String aboutInstitution;
+    private Long index_position;
     @CreationTimestamp
     private Timestamp creationDate;
     @UpdateTimestamp

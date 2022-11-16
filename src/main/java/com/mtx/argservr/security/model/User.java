@@ -1,6 +1,7 @@
 package com.mtx.argservr.security.model;
 
 import com.mtx.argservr.util.Constants.Tables;
+import java.sql.Timestamp;
 import java.util.Collection;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -17,6 +18,8 @@ import javax.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -35,6 +38,11 @@ public class User implements UserDetails {
     private String lastName;
     private String email;
     private String password;
+    
+    @CreationTimestamp
+    private Timestamp creationDate;
+    @UpdateTimestamp
+    private Timestamp updateDate;
 
     @ManyToMany(fetch
             = FetchType.EAGER,

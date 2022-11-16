@@ -9,6 +9,7 @@ public class Constants {
         public static final String USERS_ROLES = USERS + "_" + ROLES;
         public static final String ROLE_ID = "role_id";
         public static final String USER_ID = "user_id";
+        public static final String EDUCATIONS = "educations";
     }
 
     public static abstract class Endpoints {
@@ -20,6 +21,8 @@ public class Constants {
 
         public static final String REGISTER_PATH = AUTH + REGISTER;
         public static final String LOGIN_PATH = AUTH + LOGIN;
+
+        public static final String EDUCATION = ROOT + "/educations";
     }
 
     public static abstract class Patterns {
