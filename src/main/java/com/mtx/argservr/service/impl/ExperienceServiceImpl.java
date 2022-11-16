@@ -7,8 +7,12 @@ import com.mtx.argservr.model.Experience;
 import com.mtx.argservr.repository.ExperienceRepository;
 import com.mtx.argservr.service.IExperienceService;
 import java.util.List;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
+@Transactional
 public class ExperienceServiceImpl implements IExperienceService {
 
     @Autowired
