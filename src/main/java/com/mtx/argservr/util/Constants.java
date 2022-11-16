@@ -10,6 +10,7 @@ public class Constants {
         public static final String ROLE_ID = "role_id";
         public static final String USER_ID = "user_id";
         public static final String EDUCATIONS = "educations";
+        public static final String EXPERIENCES = "experiences";
     }
 
     public static abstract class Endpoints {
@@ -23,6 +24,7 @@ public class Constants {
         public static final String LOGIN_PATH = AUTH + LOGIN;
 
         public static final String EDUCATION = ROOT + "/educations";
+        public static final String EXPERIENCE = ROOT + "/experiences";
     }
 
     public static abstract class Patterns {
@@ -30,6 +32,9 @@ public class Constants {
         public static final String FIRSTNAME_PATTERN = "^[a-zA-Z][ a-zA-Z]*$";
         public static final String LASTNAME_PATTERN = "^[a-zA-Z][ a-zA-Z]*$";
         public static final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–{}:;',?/*~$^+=<>]).{8,20}$";
+
+        public static final String TITLE_PATTERN = "^[a-zA-Z][ a-zA-Z0-9\\-\\°\\:]*$";
+        public static final String DESCRIPTION_PATTERN = "[ a-zA-Z0-9\\+\\*\\?\\¿\\¡\\!\\.\\\"\\:\\-\\*\\@\\\\\\/\\%\\=\\#\\$\\|\\<\\>\\(\\)\\[\\]\\^\\,\\&\\']*$";
 
     }
 

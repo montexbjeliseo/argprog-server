@@ -11,7 +11,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class RegisterEducationDto {
+public class RegisterExperienceDto {
 
     @NotBlank
     @Pattern(regexp = Constants.Patterns.TITLE_PATTERN)

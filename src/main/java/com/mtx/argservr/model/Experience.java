@@ -1,6 +1,6 @@
 package com.mtx.argservr.model;
 
-import com.mtx.argservr.util.Constants.Patterns;
+import com.mtx.argservr.util.Constants;
 import com.mtx.argservr.util.Constants.Tables;
 import java.sql.Timestamp;
 import javax.persistence.Entity;
@@ -18,11 +18,11 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
-@Table(name = Tables.EDUCATIONS)
+@Table(name = Tables.EXPERIENCES)
 @Getter
 @Setter
 @NoArgsConstructor
-public class Education {
+public class Experience {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
