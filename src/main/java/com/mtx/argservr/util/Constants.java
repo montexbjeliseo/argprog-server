@@ -12,6 +12,7 @@ public class Constants {
         public static final String EDUCATIONS = "educations";
         public static final String EXPERIENCES = "experiences";
         public static final String PROJECTS = "projects";
+        public static final String SKILLS = "skills";
         
     }
 
@@ -28,6 +29,7 @@ public class Constants {
         public static final String EDUCATION = ROOT + "/educations";
         public static final String EXPERIENCE = ROOT + "/experiences";
         public static final String PROJECT = ROOT + "/projects";
+        public static final String SKILL = ROOT + "/skills";
     }
 
     public static abstract class Patterns {
