@@ -38,6 +38,8 @@ public class User implements UserDetails {
     private String lastName;
     private String email;
     private String password;
+    private String photo;
+    private String about;
     
     @CreationTimestamp
     private Timestamp creationDate;

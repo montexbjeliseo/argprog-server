@@ -19,6 +19,7 @@ public class RegisterEducationDto {
     @NotBlank
     @Pattern(regexp = Constants.Patterns.DESCRIPTION_PATTERN)
     private String description;
+    private String photo;
     @NotBlank
     @Pattern(regexp = Constants.Patterns.TITLE_PATTERN)
     private String institution;
@@ -26,5 +27,5 @@ public class RegisterEducationDto {
     @Pattern(regexp = Constants.Patterns.DESCRIPTION_PATTERN)
     private String aboutInstitution;
     @NotNull
-    private Long index_position;
+    private Long indexPosition;
 }

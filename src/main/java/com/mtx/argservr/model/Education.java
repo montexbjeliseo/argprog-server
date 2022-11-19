@@ -29,9 +29,10 @@ public class Education {
     private Long id;
     private String title;
     private String description;
+    private String photo;
     private String institution;
     private String aboutInstitution;
-    private Long index_position;
+    private Long indexPosition;
     @CreationTimestamp
     private Timestamp creationDate;
     @UpdateTimestamp

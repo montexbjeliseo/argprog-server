@@ -19,6 +19,7 @@ public class RegisterExperienceDto {
     @NotBlank
     @Pattern(regexp = Constants.Patterns.DESCRIPTION_PATTERN)
     private String description;
+    private String photo;
     @NotBlank
     @Pattern(regexp = Constants.Patterns.TITLE_PATTERN)
     private String institution;

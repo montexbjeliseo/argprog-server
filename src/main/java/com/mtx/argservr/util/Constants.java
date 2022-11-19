@@ -13,7 +13,8 @@ public class Constants {
         public static final String EXPERIENCES = "experiences";
         public static final String PROJECTS = "projects";
         public static final String SKILLS = "skills";
-        
+        public static final String SOCIAL_MEDIA = "socialmedias";
+
     }
 
     public static abstract class Endpoints {
@@ -30,6 +31,8 @@ public class Constants {
         public static final String EXPERIENCE = ROOT + "/experiences";
         public static final String PROJECT = ROOT + "/projects";
         public static final String SKILL = ROOT + "/skills";
+        public static final String PUBLIC_RESOURCE = ROOT + "/public/resources";
+        public static final String SOCIAL_MEDIA = ROOT + "/social/medias";
     }
 
     public static abstract class Patterns {

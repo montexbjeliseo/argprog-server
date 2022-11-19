@@ -1,6 +1,6 @@
 package com.mtx.argservr.dto.request;
 
-import com.mtx.argservr.util.Constants;
+import com.mtx.argservr.util.Constants.Patterns;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import lombok.Getter;
@@ -10,13 +10,11 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class RegisterSkillDto {
+public class RegisterSocialMediaDto {
 
     @NotBlank
-    @Pattern(regexp = Constants.Patterns.TITLE_PATTERN)
+    @Pattern(regexp = Patterns.TITLE_PATTERN)
     private String name;
-    @NotBlank
-    @Pattern(regexp = Constants.Patterns.TITLE_PATTERN)
-    private String description;
-    private String photo;
+    private String image;
+    private String link;
 }

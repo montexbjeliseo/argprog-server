@@ -7,10 +7,10 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class SkillDto {
+public class SocialMediaDto {
 
     private Long id;
     private String name;
-    private String description;
-    private String photo;
+    private String image;
+    private String link;
 }

@@ -11,6 +11,8 @@ public class RegisteredUserDto {
 
     private String firstName;
     private String lastName;
+    private String photo;
     private String email;
     private String jwtToken;
+    private String about;
 }

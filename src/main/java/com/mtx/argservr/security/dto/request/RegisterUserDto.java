@@ -28,4 +28,8 @@ public class RegisterUserDto {
     @NotBlank
     @Pattern(regexp = Patterns.PASSWORD_PATTERN)
     private String password;
+
+    private String photo;
+
+    private String about;
 }
