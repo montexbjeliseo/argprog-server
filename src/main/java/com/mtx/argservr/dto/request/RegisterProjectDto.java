@@ -27,5 +27,5 @@ public class RegisterProjectDto {
     @Pattern(regexp = Constants.Patterns.DESCRIPTION_PATTERN)
     private String aboutInstitution;
     @NotNull
-    private Long index_position;
+    private Long indexPosition;
 }

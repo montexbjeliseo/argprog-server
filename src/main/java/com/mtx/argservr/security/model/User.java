@@ -1,6 +1,7 @@
 package com.mtx.argservr.security.model;
 
 import com.mtx.argservr.util.Constants.Tables;
+import java.sql.Date;
 import java.sql.Timestamp;
 import java.util.Collection;
 import java.util.Set;
@@ -40,7 +41,8 @@ public class User implements UserDetails {
     private String password;
     private String photo;
     private String about;
-    
+    private Date birthDate;
+    private String phoneNumber;
     @CreationTimestamp
     private Timestamp creationDate;
     @UpdateTimestamp
