@@ -14,6 +14,7 @@ public class Constants {
         public static final String PROJECTS = "projects";
         public static final String SKILLS = "skills";
         public static final String SOCIAL_MEDIA = "socialmedias";
+        public static final String LANGUAGES = "languages";
 
     }
 
@@ -33,6 +34,7 @@ public class Constants {
         public static final String SKILL = ROOT + "/skills";
         public static final String PUBLIC_RESOURCE = ROOT + "/public/resources";
         public static final String SOCIAL_MEDIA = ROOT + "/social/medias";
+        public static final String LANGUAGE = ROOT + "/languages";
         public static final String ID = "/{id}";
     }
 

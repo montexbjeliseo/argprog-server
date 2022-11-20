@@ -24,4 +24,5 @@ public class PublicResource {
     private List<ProjectDto> projects;
     private List<SkillDto> skills;
     private List<SocialMediaDto> socialMedias;
+    private List<LanguageDto> languages;
 }
