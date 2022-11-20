@@ -1,8 +1,10 @@
 package com.mtx.argservr.service.impl;
 
 import com.mtx.argservr.dto.request.RegisterSocialMediaDto;
+import com.mtx.argservr.dto.request.UpdateSocialMediaDto;
 import com.mtx.argservr.dto.response.SocialMediaDto;
 import com.mtx.argservr.exception.DuplicatedResourceException;
+import com.mtx.argservr.exception.ResourceNotFoundException;
 import com.mtx.argservr.mapper.SocialMediaMapper;
 import com.mtx.argservr.model.SocialMedia;
 import com.mtx.argservr.repository.SocialMediaRepository;
@@ -35,5 +37,16 @@ public class SocialMediaServiceImpl implements ISocialMediaService {
     @Override
     public List<SocialMediaDto> getAll() {
         return socialMediaMapper.toDtoList(socialMediaRepository.findAll());
+    }
+
+    @Override
+    public SocialMediaDto update(Long id, UpdateSocialMediaDto dto) {
+        if (!socialMediaRepository.existsById(id)) {
+            throw new ResourceNotFoundException("No se encontró el recurso");
+        }
+        SocialMedia socialMedia = socialMediaRepository.findById(id).get();
+        socialMedia = socialMediaMapper.update(dto, socialMedia);
+        SocialMedia saved = socialMediaRepository.save(socialMedia);
+        return socialMediaMapper.toDto(saved);
     }
 }

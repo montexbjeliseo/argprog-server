@@ -33,6 +33,7 @@ public class Constants {
         public static final String SKILL = ROOT + "/skills";
         public static final String PUBLIC_RESOURCE = ROOT + "/public/resources";
         public static final String SOCIAL_MEDIA = ROOT + "/social/medias";
+        public static final String ID = "/{id}";
     }
 
     public static abstract class Patterns {

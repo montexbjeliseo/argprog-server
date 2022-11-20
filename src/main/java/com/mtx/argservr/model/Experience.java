@@ -31,7 +31,7 @@ public class Experience {
     private String description;
     private String institution;
     private String aboutInstitution;
-    private Long index_position;
+    private Long indexPosition;
     @CreationTimestamp
     private Timestamp creationDate;
     @UpdateTimestamp
