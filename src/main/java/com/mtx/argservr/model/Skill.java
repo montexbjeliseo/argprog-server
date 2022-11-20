@@ -25,6 +25,7 @@ public class Skill {
     private Long id;
     private String name;
     private String description;
+    private String photo;
     @CreationTimestamp
     private Timestamp creationDate;
     @UpdateTimestamp
