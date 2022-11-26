@@ -6,9 +6,11 @@ import com.mtx.argservr.dto.response.LanguageDto;
 import com.mtx.argservr.model.Language;
 import java.util.List;
 import org.mapstruct.BeanMapping;
+import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 import org.mapstruct.NullValuePropertyMappingStrategy;
 
+@Mapper(componentModel="spring")
 public interface LanguageMapper {
 
     Language toLanguage(RegisterLanguageDto dto);
