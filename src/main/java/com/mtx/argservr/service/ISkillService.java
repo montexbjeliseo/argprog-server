@@ -12,4 +12,6 @@ public interface ISkillService {
     List<SkillDto> getAll();
 
     SkillDto update(Long id, UpdateSkillDto dto);
+    
+    SkillDto delete(Long id);
 }

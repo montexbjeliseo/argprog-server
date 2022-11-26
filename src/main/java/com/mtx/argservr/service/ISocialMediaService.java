@@ -10,6 +10,8 @@ public interface ISocialMediaService {
     SocialMediaDto save(RegisterSocialMediaDto dto);
 
     List<SocialMediaDto> getAll();
-    
+
     SocialMediaDto update(Long id, UpdateSocialMediaDto dto);
+
+    SocialMediaDto delete(Long id);
 }

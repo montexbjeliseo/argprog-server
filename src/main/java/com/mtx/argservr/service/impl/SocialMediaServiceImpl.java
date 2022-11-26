@@ -49,4 +49,14 @@ public class SocialMediaServiceImpl implements ISocialMediaService {
         SocialMedia saved = socialMediaRepository.save(socialMedia);
         return socialMediaMapper.toDto(saved);
     }
+
+    @Override
+    public SocialMediaDto delete(Long id) {
+        if (!socialMediaRepository.existsById(id)) {
+            throw new ResourceNotFoundException("No se encontró el recurso");
+        }
+        SocialMedia socialMedia = socialMediaRepository.findById(id).get();
+        socialMediaRepository.deleteById(id);
+        return socialMediaMapper.toDto(socialMedia);
+    }
 }

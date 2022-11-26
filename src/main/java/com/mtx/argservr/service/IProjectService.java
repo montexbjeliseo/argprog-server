@@ -12,4 +12,6 @@ public interface IProjectService {
     List<ProjectDto> getAll();
     
     ProjectDto update(Long id, UpdateProjectDto dto);
+    
+    ProjectDto delete(Long id);
 }

@@ -34,9 +34,9 @@ public class ProjectServiceImpl implements IProjectService {
     public List<ProjectDto> getAll() {
         return projectMapper.toDtoList(projectRepository.findAll());
     }
-    
+
     @Override
-    public ProjectDto update(Long id, UpdateProjectDto dto){
+    public ProjectDto update(Long id, UpdateProjectDto dto) {
         if (!projectRepository.existsById(id)) {
             throw new ResourceNotFoundException("No se encontró el recurso");
         }
@@ -44,6 +44,16 @@ public class ProjectServiceImpl implements IProjectService {
         project = projectMapper.update(dto, project);
         Project saved = projectRepository.save(project);
         return projectMapper.toDto(saved);
+    }
+
+    @Override
+    public ProjectDto delete(Long id) {
+        if (!projectRepository.existsById(id)) {
+            throw new ResourceNotFoundException("No se encontró el recurso");
+        }
+        Project project = projectRepository.findById(id).get();
+        projectRepository.deleteById(id);
+        return projectMapper.toDto(project);
     }
 
 }

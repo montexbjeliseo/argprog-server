@@ -12,4 +12,6 @@ public interface ILanguageService {
     List<LanguageDto> getAll();
 
     LanguageDto update(Long id, UpdateLanguageDto dto);
+    
+    LanguageDto delete(Long id);
 }

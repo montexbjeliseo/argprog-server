@@ -46,4 +46,14 @@ public class EducationServiceImpl implements IEducationService {
         return educationMapper.toDto(saved);
     }
 
+    @Override
+    public EducationDto delete(Long id) {
+        if (!educationRepository.existsById(id)) {
+            throw new ResourceNotFoundException("No se encontró el recurso");
+        }
+        Education education = educationRepository.findById(id).get();
+        educationRepository.deleteById(id);
+        return educationMapper.toDto(education);
+    }
+
 }

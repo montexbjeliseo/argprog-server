@@ -12,4 +12,6 @@ public interface IExperienceService {
     List<ExperienceDto> getAll();
 
     ExperienceDto update(Long id, UpdateExperienceDto dto);
+
+    ExperienceDto delete(Long id);
 }

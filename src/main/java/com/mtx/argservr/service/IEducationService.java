@@ -12,4 +12,6 @@ public interface IEducationService {
     List<EducationDto> getAll();
 
     EducationDto update(Long id, UpdateEducationDto dto);
+    
+    EducationDto delete(Long id);
 }
