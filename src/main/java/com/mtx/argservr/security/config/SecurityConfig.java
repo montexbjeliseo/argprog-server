@@ -5,7 +5,6 @@ import com.mtx.argservr.exception.handler.CustomAuthenticationEntryPoint;
 import com.mtx.argservr.security.filter.JwtRequestFilter;
 import com.mtx.argservr.security.service.impl.UserDetailsServiceImpl;
 import com.mtx.argservr.util.Constants.Endpoints;
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

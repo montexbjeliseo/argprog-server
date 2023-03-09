@@ -24,6 +24,7 @@ public class UserServiceImpl implements IUserService {
     public UserDto update(UpdateUserDto dto) {
         User user = userRepository.findAll().get(0); //Si no hay usuarios me muero
         user = userMapper.update(dto, user);
+        user = userRepository.save(user);
         return userMapper.toDto(user);
     }
 

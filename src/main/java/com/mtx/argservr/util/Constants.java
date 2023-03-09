@@ -35,6 +35,7 @@ public class Constants {
         public static final String PUBLIC_RESOURCE = ROOT + "/public/resources";
         public static final String SOCIAL_MEDIA = ROOT + "/social/medias";
         public static final String LANGUAGE = ROOT + "/languages";
+        public static final String ABOUT = ROOT + "/about";
         public static final String ID = "/{id}";
     }
 
@@ -45,7 +46,7 @@ public class Constants {
         public static final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–{}:;',?/*~$^+=<>]).{8,20}$";
 
         public static final String TITLE_PATTERN = "^[a-zA-Z][ a-zA-Z0-9\\-\\°\\:]*$";
-        public static final String DESCRIPTION_PATTERN = "[ a-zA-Z0-9\\+\\*\\?\\¿\\¡\\!\\.\\\"\\:\\-\\*\\@\\\\\\/\\%\\=\\#\\$\\|\\<\\>\\(\\)\\[\\]\\^\\,\\&\\']*$";
+        public static final String DESCRIPTION_PATTERN = "[ a-zA-ZÀ-ÿ0-9\\+\\*\\?\\¿\\¡\\!\\.\\\"\\:\\-\\*\\@\\\\\\/\\%\\=\\#\\$\\|\\<\\>\\(\\)\\[\\]\\^\\,\\&\\'\\n]*$";
 
     }
 
@@ -67,6 +68,6 @@ public class Constants {
         public static final String FIRSTNAME = "Eliseo";
         public static final String LASTNAME = "Montenegro";
         public static final String EMAIL = "secondmtx@gmail.com";
-        public static final String PASSWORD = "$2a$10$d/hwuYFd2ZzTVdLjADUM3.RTXsIP9eMXKfTJ0jgciW.YI.SzVFPSy";
+        public static final String PASSWORD = "Eliseo@1234!";
     }
 }

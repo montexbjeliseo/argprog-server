@@ -11,6 +11,7 @@ import java.util.Set;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -23,6 +24,9 @@ public class DataLoader implements CommandLineRunner {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private BCryptPasswordEncoder bcrypt;
+    
     @Override
     public void run(String... args) throws Exception {
         if (!roleRepository.existsByName(Roles.USER)) {
@@ -37,7 +41,7 @@ public class DataLoader implements CommandLineRunner {
             user.setFirstName(UserData.FIRSTNAME);
             user.setLastName(UserData.LASTNAME);
             user.setEmail(UserData.EMAIL);
-            user.setPassword(UserData.PASSWORD);
+            user.setPassword(bcrypt.encode(UserData.PASSWORD));
             Set<Role> roles = new HashSet<>();
             roles.add(roleRepository.findByName(Roles.USER).get());
             user.setRoles(roles);
