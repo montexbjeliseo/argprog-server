@@ -67,7 +67,5 @@ public class Constants {
 
         public static final String FIRSTNAME = "Eliseo";
         public static final String LASTNAME = "Montenegro";
-        public static final String EMAIL = "secondmtx@gmail.com";
-        public static final String PASSWORD = "Eliseo@1234!";
     }
 }
