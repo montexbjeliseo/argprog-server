@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-04-23T21:35:54-0300",
-    comments = "version: 1.4.2.Final, compiler: Eclipse JDT (IDE) 3.33.0.v20230218-1114, environment: Java 17.0.6 (Eclipse Adoptium)"
+    date = "2023-04-23T21:56:23-0300",
+    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 11.0.19 (Microsoft)"
 )
 @Component
 public class SocialMediaMapperImpl implements SocialMediaMapper {
@@ -25,9 +25,9 @@ public class SocialMediaMapperImpl implements SocialMediaMapper {
 
         SocialMedia socialMedia = new SocialMedia();
 
+        socialMedia.setName( dto.getName() );
         socialMedia.setImage( dto.getImage() );
         socialMedia.setLink( dto.getLink() );
-        socialMedia.setName( dto.getName() );
 
         return socialMedia;
     }
@@ -41,9 +41,9 @@ public class SocialMediaMapperImpl implements SocialMediaMapper {
         SocialMediaDto socialMediaDto = new SocialMediaDto();
 
         socialMediaDto.setId( socialMedia.getId() );
+        socialMediaDto.setName( socialMedia.getName() );
         socialMediaDto.setImage( socialMedia.getImage() );
         socialMediaDto.setLink( socialMedia.getLink() );
-        socialMediaDto.setName( socialMedia.getName() );
 
         return socialMediaDto;
     }
@@ -68,14 +68,14 @@ public class SocialMediaMapperImpl implements SocialMediaMapper {
             return null;
         }
 
+        if ( dto.getName() != null ) {
+            socialMedia.setName( dto.getName() );
+        }
         if ( dto.getImage() != null ) {
             socialMedia.setImage( dto.getImage() );
         }
         if ( dto.getLink() != null ) {
             socialMedia.setLink( dto.getLink() );
-        }
-        if ( dto.getName() != null ) {
-            socialMedia.setName( dto.getName() );
         }
 
         return socialMedia;

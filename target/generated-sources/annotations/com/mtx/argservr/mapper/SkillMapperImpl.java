@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-04-23T21:36:00-0300",
-    comments = "version: 1.4.2.Final, compiler: Eclipse JDT (IDE) 3.33.0.v20230218-1114, environment: Java 17.0.6 (Eclipse Adoptium)"
+    date = "2023-04-23T21:56:22-0300",
+    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 11.0.19 (Microsoft)"
 )
 @Component
 public class SkillMapperImpl implements SkillMapper {
@@ -25,8 +25,8 @@ public class SkillMapperImpl implements SkillMapper {
 
         Skill skill = new Skill();
 
-        skill.setDescription( dto.getDescription() );
         skill.setName( dto.getName() );
+        skill.setDescription( dto.getDescription() );
         skill.setPhoto( dto.getPhoto() );
 
         return skill;
@@ -40,9 +40,9 @@ public class SkillMapperImpl implements SkillMapper {
 
         SkillDto skillDto = new SkillDto();
 
-        skillDto.setDescription( skill.getDescription() );
         skillDto.setId( skill.getId() );
         skillDto.setName( skill.getName() );
+        skillDto.setDescription( skill.getDescription() );
         skillDto.setPhoto( skill.getPhoto() );
 
         return skillDto;
@@ -68,11 +68,11 @@ public class SkillMapperImpl implements SkillMapper {
             return null;
         }
 
-        if ( dto.getDescription() != null ) {
-            skill.setDescription( dto.getDescription() );
-        }
         if ( dto.getName() != null ) {
             skill.setName( dto.getName() );
+        }
+        if ( dto.getDescription() != null ) {
+            skill.setDescription( dto.getDescription() );
         }
         if ( dto.getPhoto() != null ) {
             skill.setPhoto( dto.getPhoto() );

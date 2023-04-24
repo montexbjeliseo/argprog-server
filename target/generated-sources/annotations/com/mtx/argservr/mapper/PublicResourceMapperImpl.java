@@ -13,8 +13,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-04-23T21:35:58-0300",
-    comments = "version: 1.4.2.Final, compiler: Eclipse JDT (IDE) 3.33.0.v20230218-1114, environment: Java 17.0.6 (Eclipse Adoptium)"
+    date = "2023-04-23T21:56:21-0300",
+    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 11.0.19 (Microsoft)"
 )
 @Component
 public class PublicResourceMapperImpl implements PublicResourceMapper {
@@ -38,13 +38,13 @@ public class PublicResourceMapperImpl implements PublicResourceMapper {
 
         PublicResource publicResource = new PublicResource();
 
-        publicResource.setAbout( user.getAbout() );
-        publicResource.setBirthDate( xmlGregorianCalendarToCalendar( dateToXmlGregorianCalendar( user.getBirthDate() ) ) );
-        publicResource.setEmail( user.getEmail() );
         publicResource.setFirstName( user.getFirstName() );
         publicResource.setLastName( user.getLastName() );
-        publicResource.setPhoneNumber( user.getPhoneNumber() );
+        publicResource.setAbout( user.getAbout() );
         publicResource.setPhoto( user.getPhoto() );
+        publicResource.setBirthDate( xmlGregorianCalendarToCalendar( dateToXmlGregorianCalendar( user.getBirthDate() ) ) );
+        publicResource.setEmail( user.getEmail() );
+        publicResource.setPhoneNumber( user.getPhoneNumber() );
 
         return publicResource;
     }

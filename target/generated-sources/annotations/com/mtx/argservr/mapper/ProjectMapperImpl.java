@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-04-23T21:36:00-0300",
-    comments = "version: 1.4.2.Final, compiler: Eclipse JDT (IDE) 3.33.0.v20230218-1114, environment: Java 17.0.6 (Eclipse Adoptium)"
+    date = "2023-04-23T21:56:20-0300",
+    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 11.0.19 (Microsoft)"
 )
 @Component
 public class ProjectMapperImpl implements ProjectMapper {
@@ -25,12 +25,12 @@ public class ProjectMapperImpl implements ProjectMapper {
 
         Project project = new Project();
 
-        project.setAboutInstitution( dto.getAboutInstitution() );
-        project.setDescription( dto.getDescription() );
-        project.setIndexPosition( dto.getIndexPosition() );
-        project.setInstitution( dto.getInstitution() );
-        project.setPhoto( dto.getPhoto() );
         project.setTitle( dto.getTitle() );
+        project.setDescription( dto.getDescription() );
+        project.setPhoto( dto.getPhoto() );
+        project.setInstitution( dto.getInstitution() );
+        project.setAboutInstitution( dto.getAboutInstitution() );
+        project.setIndexPosition( dto.getIndexPosition() );
 
         return project;
     }
@@ -43,13 +43,13 @@ public class ProjectMapperImpl implements ProjectMapper {
 
         ProjectDto projectDto = new ProjectDto();
 
-        projectDto.setAboutInstitution( project.getAboutInstitution() );
-        projectDto.setDescription( project.getDescription() );
         projectDto.setId( project.getId() );
-        projectDto.setIndexPosition( project.getIndexPosition() );
-        projectDto.setInstitution( project.getInstitution() );
-        projectDto.setPhoto( project.getPhoto() );
         projectDto.setTitle( project.getTitle() );
+        projectDto.setDescription( project.getDescription() );
+        projectDto.setPhoto( project.getPhoto() );
+        projectDto.setInstitution( project.getInstitution() );
+        projectDto.setAboutInstitution( project.getAboutInstitution() );
+        projectDto.setIndexPosition( project.getIndexPosition() );
 
         return projectDto;
     }
@@ -74,23 +74,23 @@ public class ProjectMapperImpl implements ProjectMapper {
             return null;
         }
 
-        if ( dto.getAboutInstitution() != null ) {
-            project.setAboutInstitution( dto.getAboutInstitution() );
+        if ( dto.getTitle() != null ) {
+            project.setTitle( dto.getTitle() );
         }
         if ( dto.getDescription() != null ) {
             project.setDescription( dto.getDescription() );
         }
-        if ( dto.getIndexPosition() != null ) {
-            project.setIndexPosition( dto.getIndexPosition() );
+        if ( dto.getPhoto() != null ) {
+            project.setPhoto( dto.getPhoto() );
         }
         if ( dto.getInstitution() != null ) {
             project.setInstitution( dto.getInstitution() );
         }
-        if ( dto.getPhoto() != null ) {
-            project.setPhoto( dto.getPhoto() );
+        if ( dto.getAboutInstitution() != null ) {
+            project.setAboutInstitution( dto.getAboutInstitution() );
         }
-        if ( dto.getTitle() != null ) {
-            project.setTitle( dto.getTitle() );
+        if ( dto.getIndexPosition() != null ) {
+            project.setIndexPosition( dto.getIndexPosition() );
         }
 
         return project;
