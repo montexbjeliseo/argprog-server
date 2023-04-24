@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-04-23T19:48:14-0300",
-    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 11.0.19 (Microsoft)"
+    date = "2023-04-23T21:36:03-0300",
+    comments = "version: 1.4.2.Final, compiler: Eclipse JDT (IDE) 3.33.0.v20230218-1114, environment: Java 17.0.6 (Eclipse Adoptium)"
 )
 @Component
 public class UserMapperImpl implements UserMapper {
@@ -25,13 +25,13 @@ public class UserMapperImpl implements UserMapper {
 
         User user = new User();
 
-        user.setFirstName( dto.getFirstName() );
-        user.setLastName( dto.getLastName() );
-        user.setEmail( dto.getEmail() );
-        user.setPassword( dto.getPassword() );
-        user.setPhoto( dto.getPhoto() );
         user.setAbout( dto.getAbout() );
         user.setBirthDate( dto.getBirthDate() );
+        user.setEmail( dto.getEmail() );
+        user.setFirstName( dto.getFirstName() );
+        user.setLastName( dto.getLastName() );
+        user.setPassword( dto.getPassword() );
+        user.setPhoto( dto.getPhoto() );
 
         return user;
     }
@@ -44,11 +44,11 @@ public class UserMapperImpl implements UserMapper {
 
         RegisteredUserDto registeredUserDto = new RegisteredUserDto();
 
+        registeredUserDto.setAbout( user.getAbout() );
+        registeredUserDto.setEmail( user.getEmail() );
         registeredUserDto.setFirstName( user.getFirstName() );
         registeredUserDto.setLastName( user.getLastName() );
         registeredUserDto.setPhoto( user.getPhoto() );
-        registeredUserDto.setEmail( user.getEmail() );
-        registeredUserDto.setAbout( user.getAbout() );
 
         return registeredUserDto;
     }
@@ -59,29 +59,29 @@ public class UserMapperImpl implements UserMapper {
             return null;
         }
 
-        if ( dto.getFirstName() != null ) {
-            user.setFirstName( dto.getFirstName() );
-        }
-        if ( dto.getLastName() != null ) {
-            user.setLastName( dto.getLastName() );
-        }
-        if ( dto.getEmail() != null ) {
-            user.setEmail( dto.getEmail() );
-        }
-        if ( dto.getPassword() != null ) {
-            user.setPassword( dto.getPassword() );
-        }
-        if ( dto.getPhoto() != null ) {
-            user.setPhoto( dto.getPhoto() );
-        }
         if ( dto.getAbout() != null ) {
             user.setAbout( dto.getAbout() );
         }
         if ( dto.getBirthDate() != null ) {
             user.setBirthDate( new Date( dto.getBirthDate().getTime() ) );
         }
+        if ( dto.getEmail() != null ) {
+            user.setEmail( dto.getEmail() );
+        }
+        if ( dto.getFirstName() != null ) {
+            user.setFirstName( dto.getFirstName() );
+        }
+        if ( dto.getLastName() != null ) {
+            user.setLastName( dto.getLastName() );
+        }
+        if ( dto.getPassword() != null ) {
+            user.setPassword( dto.getPassword() );
+        }
         if ( dto.getPhoneNumber() != null ) {
             user.setPhoneNumber( dto.getPhoneNumber() );
+        }
+        if ( dto.getPhoto() != null ) {
+            user.setPhoto( dto.getPhoto() );
         }
 
         return user;
@@ -95,13 +95,13 @@ public class UserMapperImpl implements UserMapper {
 
         UserDto userDto = new UserDto();
 
-        userDto.setFirstName( user.getFirstName() );
-        userDto.setLastName( user.getLastName() );
-        userDto.setPhoto( user.getPhoto() );
-        userDto.setEmail( user.getEmail() );
         userDto.setAbout( user.getAbout() );
         userDto.setBirthDate( user.getBirthDate() );
+        userDto.setEmail( user.getEmail() );
+        userDto.setFirstName( user.getFirstName() );
+        userDto.setLastName( user.getLastName() );
         userDto.setPhoneNumber( user.getPhoneNumber() );
+        userDto.setPhoto( user.getPhoto() );
 
         return userDto;
     }

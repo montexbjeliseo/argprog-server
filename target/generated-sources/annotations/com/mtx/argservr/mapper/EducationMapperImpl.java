@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-04-23T19:48:12-0300",
-    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 11.0.19 (Microsoft)"
+    date = "2023-04-23T21:35:58-0300",
+    comments = "version: 1.4.2.Final, compiler: Eclipse JDT (IDE) 3.33.0.v20230218-1114, environment: Java 17.0.6 (Eclipse Adoptium)"
 )
 @Component
 public class EducationMapperImpl implements EducationMapper {
@@ -25,12 +25,12 @@ public class EducationMapperImpl implements EducationMapper {
 
         Education education = new Education();
 
-        education.setTitle( dto.getTitle() );
-        education.setDescription( dto.getDescription() );
-        education.setPhoto( dto.getPhoto() );
-        education.setInstitution( dto.getInstitution() );
         education.setAboutInstitution( dto.getAboutInstitution() );
+        education.setDescription( dto.getDescription() );
         education.setIndexPosition( dto.getIndexPosition() );
+        education.setInstitution( dto.getInstitution() );
+        education.setPhoto( dto.getPhoto() );
+        education.setTitle( dto.getTitle() );
 
         return education;
     }
@@ -43,13 +43,13 @@ public class EducationMapperImpl implements EducationMapper {
 
         EducationDto educationDto = new EducationDto();
 
-        educationDto.setId( education.getId() );
-        educationDto.setTitle( education.getTitle() );
-        educationDto.setDescription( education.getDescription() );
-        educationDto.setPhoto( education.getPhoto() );
-        educationDto.setInstitution( education.getInstitution() );
         educationDto.setAboutInstitution( education.getAboutInstitution() );
+        educationDto.setDescription( education.getDescription() );
+        educationDto.setId( education.getId() );
         educationDto.setIndexPosition( education.getIndexPosition() );
+        educationDto.setInstitution( education.getInstitution() );
+        educationDto.setPhoto( education.getPhoto() );
+        educationDto.setTitle( education.getTitle() );
 
         return educationDto;
     }
@@ -74,23 +74,23 @@ public class EducationMapperImpl implements EducationMapper {
             return null;
         }
 
-        if ( dto.getTitle() != null ) {
-            education.setTitle( dto.getTitle() );
+        if ( dto.getAboutInstitution() != null ) {
+            education.setAboutInstitution( dto.getAboutInstitution() );
         }
         if ( dto.getDescription() != null ) {
             education.setDescription( dto.getDescription() );
         }
-        if ( dto.getPhoto() != null ) {
-            education.setPhoto( dto.getPhoto() );
+        if ( dto.getIndexPosition() != null ) {
+            education.setIndexPosition( dto.getIndexPosition() );
         }
         if ( dto.getInstitution() != null ) {
             education.setInstitution( dto.getInstitution() );
         }
-        if ( dto.getAboutInstitution() != null ) {
-            education.setAboutInstitution( dto.getAboutInstitution() );
+        if ( dto.getPhoto() != null ) {
+            education.setPhoto( dto.getPhoto() );
         }
-        if ( dto.getIndexPosition() != null ) {
-            education.setIndexPosition( dto.getIndexPosition() );
+        if ( dto.getTitle() != null ) {
+            education.setTitle( dto.getTitle() );
         }
 
         return education;

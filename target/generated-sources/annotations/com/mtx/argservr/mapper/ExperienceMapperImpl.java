@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-04-23T19:48:14-0300",
-    comments = "version: 1.4.2.Final, compiler: javac, environment: Java 11.0.19 (Microsoft)"
+    date = "2023-04-23T21:36:02-0300",
+    comments = "version: 1.4.2.Final, compiler: Eclipse JDT (IDE) 3.33.0.v20230218-1114, environment: Java 17.0.6 (Eclipse Adoptium)"
 )
 @Component
 public class ExperienceMapperImpl implements ExperienceMapper {
@@ -25,12 +25,12 @@ public class ExperienceMapperImpl implements ExperienceMapper {
 
         Experience experience = new Experience();
 
-        experience.setTitle( dto.getTitle() );
-        experience.setDescription( dto.getDescription() );
-        experience.setPhoto( dto.getPhoto() );
-        experience.setInstitution( dto.getInstitution() );
         experience.setAboutInstitution( dto.getAboutInstitution() );
+        experience.setDescription( dto.getDescription() );
         experience.setIndexPosition( dto.getIndexPosition() );
+        experience.setInstitution( dto.getInstitution() );
+        experience.setPhoto( dto.getPhoto() );
+        experience.setTitle( dto.getTitle() );
 
         return experience;
     }
@@ -43,13 +43,13 @@ public class ExperienceMapperImpl implements ExperienceMapper {
 
         ExperienceDto experienceDto = new ExperienceDto();
 
-        experienceDto.setId( dto.getId() );
-        experienceDto.setTitle( dto.getTitle() );
-        experienceDto.setDescription( dto.getDescription() );
-        experienceDto.setPhoto( dto.getPhoto() );
-        experienceDto.setInstitution( dto.getInstitution() );
         experienceDto.setAboutInstitution( dto.getAboutInstitution() );
+        experienceDto.setDescription( dto.getDescription() );
+        experienceDto.setId( dto.getId() );
         experienceDto.setIndexPosition( dto.getIndexPosition() );
+        experienceDto.setInstitution( dto.getInstitution() );
+        experienceDto.setPhoto( dto.getPhoto() );
+        experienceDto.setTitle( dto.getTitle() );
 
         return experienceDto;
     }
@@ -74,23 +74,23 @@ public class ExperienceMapperImpl implements ExperienceMapper {
             return null;
         }
 
-        if ( dto.getTitle() != null ) {
-            experience.setTitle( dto.getTitle() );
+        if ( dto.getAboutInstitution() != null ) {
+            experience.setAboutInstitution( dto.getAboutInstitution() );
         }
         if ( dto.getDescription() != null ) {
             experience.setDescription( dto.getDescription() );
         }
-        if ( dto.getPhoto() != null ) {
-            experience.setPhoto( dto.getPhoto() );
+        if ( dto.getIndexPosition() != null ) {
+            experience.setIndexPosition( dto.getIndexPosition() );
         }
         if ( dto.getInstitution() != null ) {
             experience.setInstitution( dto.getInstitution() );
         }
-        if ( dto.getAboutInstitution() != null ) {
-            experience.setAboutInstitution( dto.getAboutInstitution() );
+        if ( dto.getPhoto() != null ) {
+            experience.setPhoto( dto.getPhoto() );
         }
-        if ( dto.getIndexPosition() != null ) {
-            experience.setIndexPosition( dto.getIndexPosition() );
+        if ( dto.getTitle() != null ) {
+            experience.setTitle( dto.getTitle() );
         }
 
         return experience;
