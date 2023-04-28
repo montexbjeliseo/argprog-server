@@ -6,6 +6,7 @@ import javax.validation.constraints.Pattern;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.validator.constraints.URL;
 
 @Getter
 @Setter
@@ -16,5 +17,7 @@ public class RegisterSocialMediaDto {
     @Pattern(regexp = Patterns.TITLE_PATTERN)
     private String name;
     private String image;
+    @NotBlank
+    @URL
     private String link;
 }
