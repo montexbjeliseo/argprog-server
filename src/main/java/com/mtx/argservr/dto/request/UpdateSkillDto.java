@@ -14,6 +14,6 @@ public class UpdateSkillDto {
     @Pattern(regexp = Constants.Patterns.TITLE_PATTERN)
     private String name;
     @Pattern(regexp = Constants.Patterns.TITLE_PATTERN)
-    private String description;
-    private String photo;
+    private String level;
+    private String image;
 }

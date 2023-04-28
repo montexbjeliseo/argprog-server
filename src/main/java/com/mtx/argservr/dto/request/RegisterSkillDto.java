@@ -17,6 +17,6 @@ public class RegisterSkillDto {
     private String name;
     @NotBlank
     @Pattern(regexp = Constants.Patterns.TITLE_PATTERN)
-    private String description;
-    private String photo;
+    private String level;
+    private String image;
 }

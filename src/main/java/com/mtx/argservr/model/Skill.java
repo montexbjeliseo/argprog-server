@@ -24,8 +24,8 @@ public class Skill {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String description;
-    private String photo;
+    private String level;
+    private String image;
     @CreationTimestamp
     private Timestamp creationDate;
     @UpdateTimestamp
