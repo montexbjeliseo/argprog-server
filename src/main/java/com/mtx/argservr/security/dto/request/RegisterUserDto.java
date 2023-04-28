@@ -14,6 +14,10 @@ import org.hibernate.validator.constraints.Email;
 @NoArgsConstructor
 public class RegisterUserDto {
 
+    
+    @NotBlank
+    private String username;
+    
     @NotBlank
     @Pattern(regexp = Patterns.FIRSTNAME_PATTERN)
     private String firstName;

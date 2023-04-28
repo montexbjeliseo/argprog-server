@@ -41,12 +41,12 @@ public class Constants {
 
     public static abstract class Patterns {
 
-        public static final String FIRSTNAME_PATTERN = "^[a-zA-Z][ a-zA-Z]*$";
-        public static final String LASTNAME_PATTERN = "^[a-zA-Z][ a-zA-Z]*$";
+        public static final String FIRSTNAME_PATTERN = "^([a-zA-ZñÑáéíóúüÁÉÍÓÚÜ]{2,50})(([ a-zA-ZñÑáéíóúüÁÉÍÓÚÜ]{2,50})){0,1}$";
+        public static final String LASTNAME_PATTERN = "^([a-zA-ZñÑáéíóúüÁÉÍÓÚÜ]{2,50})(([ a-zA-ZñÑáéíóúüÁÉÍÓÚÜ]{2,50})){0,1}$";
         public static final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–{}:;',?/*~$^+=<>]).{8,20}$";
 
-        public static final String TITLE_PATTERN = "^[a-zA-Z][ a-zA-Z0-9\\-\\°\\:]*$";
-        public static final String DESCRIPTION_PATTERN = "[ a-zA-ZÀ-ÿ0-9\\+\\*\\?\\¿\\¡\\!\\.\\\"\\:\\-\\*\\@\\\\\\/\\%\\=\\#\\$\\|\\<\\>\\(\\)\\[\\]\\^\\,\\&\\'\\n]*$";
+        public static final String TITLE_PATTERN = "^[\\\\w\\\\s\\\\p{Punct} aA-zZáéíóúüÁÉÍÓÚÜñÑ0-9\\-\\+\\?\\*]+$";
+        public static final String DESCRIPTION_PATTERN = "^[\\\\w\\\\s\\\\p{Punct} aA-zZáéíóúüÁÉÍÓÚÜñÑ0-9\\-\\+\\?\\*]+$";
 
     }
 

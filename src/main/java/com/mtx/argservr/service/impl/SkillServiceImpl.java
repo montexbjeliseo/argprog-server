@@ -2,12 +2,10 @@ package com.mtx.argservr.service.impl;
 
 import com.mtx.argservr.dto.request.RegisterSkillDto;
 import com.mtx.argservr.dto.request.UpdateSkillDto;
-import com.mtx.argservr.dto.response.ExperienceDto;
 import com.mtx.argservr.dto.response.SkillDto;
 import com.mtx.argservr.exception.DuplicatedResourceException;
 import com.mtx.argservr.exception.ResourceNotFoundException;
 import com.mtx.argservr.mapper.SkillMapper;
-import com.mtx.argservr.model.Experience;
 import com.mtx.argservr.model.Skill;
 import com.mtx.argservr.repository.SkillRepository;
 import com.mtx.argservr.service.ISkillService;

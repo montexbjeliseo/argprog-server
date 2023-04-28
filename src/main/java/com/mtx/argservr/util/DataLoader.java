@@ -27,10 +27,10 @@ public class DataLoader implements CommandLineRunner {
 
     @Autowired
     private BCryptPasswordEncoder bcrypt;
-    
+
     @Autowired
     private Environment env;
-    
+
     @Override
     public void run(String... args) throws Exception {
         if (!roleRepository.existsByName(Roles.USER)) {
@@ -40,8 +40,9 @@ public class DataLoader implements CommandLineRunner {
             roleRepository.save(user);
         }
 
-        if (!userRepository.existsByEmail(env.getProperty("custom.user"))) {
+        if (!userRepository.existsByUsername(env.getProperty("custom.user"))) {
             User user = new User();
+            user.setUsername(env.getProperty("custom.user"));
             user.setFirstName(UserData.FIRSTNAME);
             user.setLastName(UserData.LASTNAME);
             user.setEmail(env.getProperty("custom.user"));
@@ -52,5 +53,4 @@ public class DataLoader implements CommandLineRunner {
             userRepository.save(user);
         }
     }
-
 }

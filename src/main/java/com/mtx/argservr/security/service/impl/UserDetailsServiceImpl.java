@@ -15,10 +15,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        if (!userRepository.existsByEmail(username)) {
+        if (!userRepository.existsByUsername(username)) {
             throw new UsernameNotFoundException("Usuario no encontrado");
         }
-        return userRepository.findByEmail(username).get();
+        return userRepository.findByUsername(username).get();
     }
 
 }

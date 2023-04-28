@@ -53,8 +53,8 @@ public class AuthServiceImpl implements IAuthService {
             throw new RuntimeException("No se adminten más registros");
         }
         //Todo lo demás será ignorado
-        if (userRepository.existsByEmail(dto.getEmail())) {
-            throw new RuntimeException("Ya se encuentra registrado: " + dto.getEmail());
+        if (userRepository.existsByUsername(dto.getUsername())) {
+            throw new RuntimeException("Ya se encuentra registrado: " + dto.getUsername());
         }
         User user = userMapper.toUser(dto);
         user.setPassword(bcrypt.encode(dto.getPassword()));
@@ -67,7 +67,7 @@ public class AuthServiceImpl implements IAuthService {
 
     @Override
     public TokenInfo login(LoginUserDto dto) {
-        if (!userRepository.existsByEmail(dto.getUsername())) {
+        if (!userRepository.existsByUsername(dto.getUsername())) {
             throw new UsernameNotFoundException("Usuario no encontrado");
         }
         try {
