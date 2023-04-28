@@ -13,6 +13,7 @@ public class PublicResource {
 
     private String firstName;
     private String lastName;
+    private String job;
     private String about;
     private String photo;
     private Calendar birthDate;

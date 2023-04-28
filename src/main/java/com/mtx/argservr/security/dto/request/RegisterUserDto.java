@@ -38,5 +38,7 @@ public class RegisterUserDto {
 
     private String about;
     
+    private String job;
+    
     private Date birthDate;
 }

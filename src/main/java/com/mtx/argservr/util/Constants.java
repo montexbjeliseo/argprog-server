@@ -46,7 +46,7 @@ public class Constants {
         public static final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–{}:;',?/*~$^+=<>]).{8,20}$";
 
         public static final String TITLE_PATTERN = "^[\\\\w\\\\s\\\\p{Punct} aA-zZáéíóúüÁÉÍÓÚÜñÑ0-9\\-\\+\\?\\*]+$";
-        public static final String DESCRIPTION_PATTERN = "^[\\\\w\\\\s\\\\p{Punct} aA-zZáéíóúüÁÉÍÓÚÜñÑ0-9\\-\\+\\?\\*]+$";
+        public static final String DESCRIPTION_PATTERN = "^[\\\\w\\\\s\\\\p{Punct} aA-zZáéíóúüÁÉÍÓÚÜñÑ0-9\\-\\+\\?\\*\\/]+$";
 
     }
 
@@ -67,5 +67,6 @@ public class Constants {
 
         public static final String FIRSTNAME = "Eliseo";
         public static final String LASTNAME = "Montenegro";
+        public static final String JOB = "Java/Angular Full Stack Developer";
     }
 }

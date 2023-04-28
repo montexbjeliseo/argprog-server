@@ -45,6 +45,7 @@ public class DataLoader implements CommandLineRunner {
             user.setUsername(env.getProperty("custom.user"));
             user.setFirstName(UserData.FIRSTNAME);
             user.setLastName(UserData.LASTNAME);
+            user.setJob(UserData.JOB);
             user.setEmail(env.getProperty("custom.user"));
             user.setPassword(bcrypt.encode(env.getProperty("custom.pass")));
             Set<Role> roles = new HashSet<>();

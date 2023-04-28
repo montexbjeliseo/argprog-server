@@ -30,6 +30,8 @@ public class UpdateUserDto {
     private String photo;
     @Pattern(regexp = Patterns.DESCRIPTION_PATTERN)
     private String about;
+    @Pattern(regexp = Patterns.DESCRIPTION_PATTERN)
+    private String job;
     
     private Date birthDate;
     
