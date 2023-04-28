@@ -2,11 +2,9 @@ package com.mtx.argservr.service.impl;
 
 import com.mtx.argservr.dto.request.RegisterExperienceDto;
 import com.mtx.argservr.dto.request.UpdateExperienceDto;
-import com.mtx.argservr.dto.response.EducationDto;
 import com.mtx.argservr.dto.response.ExperienceDto;
 import com.mtx.argservr.exception.ResourceNotFoundException;
 import com.mtx.argservr.mapper.ExperienceMapper;
-import com.mtx.argservr.model.Education;
 import com.mtx.argservr.model.Experience;
 import com.mtx.argservr.repository.ExperienceRepository;
 import com.mtx.argservr.service.IExperienceService;
