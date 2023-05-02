@@ -15,6 +15,7 @@ public class Constants {
         public static final String SKILLS = "skills";
         public static final String SOCIAL_MEDIA = "socialmedias";
         public static final String LANGUAGES = "languages";
+        public static final String LINKS = "links";
 
     }
 
@@ -37,6 +38,8 @@ public class Constants {
         public static final String LANGUAGE = ROOT + "/languages";
         public static final String ABOUT = ROOT + "/about";
         public static final String ID = "/{id}";
+        public static final String ID_LINK = "/{id}/links";
+        public static final String ID_LINK_LINKID = ID_LINK + "/{linkId}";
     }
 
     public static abstract class Patterns {

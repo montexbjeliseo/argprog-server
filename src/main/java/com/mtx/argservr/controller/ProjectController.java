@@ -1,6 +1,8 @@
 package com.mtx.argservr.controller;
 
+import com.mtx.argservr.dto.request.RegisterLinkDto;
 import com.mtx.argservr.dto.request.RegisterProjectDto;
+import com.mtx.argservr.dto.request.UpdateLinkDto;
 import com.mtx.argservr.dto.request.UpdateProjectDto;
 import com.mtx.argservr.service.IProjectService;
 import com.mtx.argservr.util.Constants.Endpoints;
@@ -33,14 +35,29 @@ public class ProjectController {
     public ResponseEntity<?> getAll() {
         return new ResponseEntity<>(projectService.getAll(), HttpStatus.OK);
     }
-    
+
     @PatchMapping(Endpoints.ID)
     public ResponseEntity<?> update(@PathVariable Long id, @Valid @RequestBody UpdateProjectDto dto) {
         return new ResponseEntity<>(projectService.update(id, dto), HttpStatus.OK);
     }
-    
+
     @DeleteMapping(Endpoints.ID)
-    public ResponseEntity<?> delete(@PathVariable Long id){
+    public ResponseEntity<?> delete(@PathVariable Long id) {
         return new ResponseEntity<>(projectService.delete(id), HttpStatus.OK);
+    }
+
+    @PostMapping(Endpoints.ID_LINK)
+    public ResponseEntity<?> update(@PathVariable Long id, @Valid @RequestBody RegisterLinkDto dto) {
+        return new ResponseEntity<>(projectService.addLink(id, dto), HttpStatus.OK);
+    }
+    
+    @PatchMapping(Endpoints.ID_LINK_LINKID)
+    public ResponseEntity<?> updateLink(@PathVariable Long id, @PathVariable Long linkId, @Valid @RequestBody UpdateLinkDto dto){
+        return new ResponseEntity<>(projectService.updateLink(id, linkId, dto), HttpStatus.OK);
+    }
+    
+    @DeleteMapping(Endpoints.ID_LINK_LINKID)
+    public ResponseEntity<?> deleteLink(@PathVariable Long id, @PathVariable Long linkId){
+        return new ResponseEntity<>(projectService.deleteLink(id, linkId), HttpStatus.OK);
     }
 }

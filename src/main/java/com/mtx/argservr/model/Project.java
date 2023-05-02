@@ -2,10 +2,13 @@ package com.mtx.argservr.model;
 
 import com.mtx.argservr.util.Constants.Tables;
 import java.sql.Timestamp;
+import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,6 +32,9 @@ public class Project {
     private String institution;
     private String aboutInstitution;
     private Long indexPosition;
+    
+    @OneToMany(mappedBy="project", orphanRemoval = true, cascade=CascadeType.ALL)
+    private Set<Link> links;
     @CreationTimestamp
     private Timestamp creationDate;
     @UpdateTimestamp

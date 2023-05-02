@@ -1,5 +1,6 @@
 package com.mtx.argservr.dto.response;
 
+import java.util.Set;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -15,5 +16,6 @@ public class ProjectDto {
     private String photo;
     private String institution;
     private String aboutInstitution;
+    private Set<LinkDto> links;
     private Long indexPosition;
 }
