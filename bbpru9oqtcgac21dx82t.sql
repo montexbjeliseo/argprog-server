@@ -6,10 +6,10 @@
 -- Generation Time: Jun 12, 2023 at 05:00 AM
 -- Server version: 8.0.15-5
 -- PHP Version: 7.2.34
-DROP DATABASE IF EXISTS portfolio;
-CREATE DATABASE portfolio;
+DROP DATABASE IF EXISTS bbpru9oqtcgac21dx82t;
+CREATE DATABASE bbpru9oqtcgac21dx82t;
 
-USE portfolio;
+USE bbpru9oqtcgac21dx82t;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
