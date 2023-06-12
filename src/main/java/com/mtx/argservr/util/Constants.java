@@ -21,6 +21,8 @@ public class Constants {
 
     public static abstract class Endpoints {
 
+        public static final String DOCS = "/swagger-ui.html";
+
         public static final String ROOT = "/api";
         public static final String AUTH = ROOT + "/auth";
         public static final String REGISTER = "/register";
